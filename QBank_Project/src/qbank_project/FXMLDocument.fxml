@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="qbank_project.FXMLDocumentController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <AnchorPane fx:id="si_loginForm" layoutX="400.0" prefHeight="600.0" prefWidth="400.0">
+               <children>
+                  <Label layoutX="43.0" layoutY="132.0" styleClass="head-label" stylesheets="@loginDegine.css" text="Login Account" textFill="#0f7918">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="si_username" layoutX="43.0" layoutY="226.0" onAction="#loginBtn" prefHeight="42.0" prefWidth="315.0" promptText="User Name:" styleClass="textfield" stylesheets="@loginDegine.css">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <PasswordField fx:id="si_password" layoutX="43.0" layoutY="291.0" onAction="#loginBtn" prefHeight="42.0" prefWidth="315.0" promptText="Password" styleClass="textfield" stylesheets="@loginDegine.css">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </PasswordField>
+                  <Button fx:id="si_loginBtn" layoutX="43.0" layoutY="383.0" mnemonicParsing="false" onAction="#loginBtn" prefHeight="42.0" prefWidth="315.0" styleClass="login-btn" stylesheets="@loginDegine.css" text="Submit" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Hyperlink fx:id="si_forgotPass" layoutX="43.0" layoutY="346.0" onAction="#switchForgotPass" text="Forgot Password?" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="su_signupForm" prefHeight="600.0" prefWidth="400.0">
+               <children>
+                  <Label layoutX="43.0" layoutY="80.0" styleClass="head-label" stylesheets="@loginDegine.css" text="Register Account" textFill="#0f7918">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="su_username" layoutX="43.0" layoutY="157.0" onAction="#regBtn" prefHeight="42.0" prefWidth="315.0" promptText="User Name:" styleClass="textfield" stylesheets="@loginDegine.css">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <PasswordField fx:id="su_password" layoutX="43.0" layoutY="217.0" onAction="#regBtn" prefHeight="42.0" prefWidth="315.0" promptText="Password" styleClass="textfield" stylesheets="@loginDegine.css">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </PasswordField>
+                  <ComboBox fx:id="su_question" layoutX="43.0" layoutY="277.0" prefHeight="42.0" prefWidth="315.0" promptText="Question" styleClass="textfield" stylesheets="@loginDegine.css" />
+                  <TextField fx:id="su_answer" layoutX="43.0" layoutY="341.0" onAction="#regBtn" prefHeight="42.0" prefWidth="315.0" promptText="Answer" styleClass="textfield" stylesheets="@loginDegine.css">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="su_signupBtn" layoutX="43.0" layoutY="408.0" mnemonicParsing="false" onAction="#regBtn" prefHeight="42.0" prefWidth="315.0" styleClass="login-btn" stylesheets="@loginDegine.css" text="Sign Up" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="fp_questionForm" layoutX="400.0" layoutY="5.0" prefHeight="600.0" prefWidth="400.0" visible="false">
+               <children>
+                  <Label layoutX="43.0" layoutY="112.0" styleClass="head-label" stylesheets="@loginDegine.css" text="Forgot Password" textFill="#0f7918">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="fp_question" layoutX="43.0" layoutY="268.0" prefHeight="42.0" prefWidth="303.0" promptText="Question" styleClass="textfield" stylesheets="@loginDegine.css" />
+                  <TextField fx:id="fp_answer" layoutX="43.0" layoutY="332.0" onAction="#proceedBtn" prefHeight="42.0" prefWidth="303.0" promptText="Answer" styleClass="textfield" stylesheets="@loginDegine.css">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="fp_preceedBtn" layoutX="43.0" layoutY="407.0" mnemonicParsing="false" onAction="#proceedBtn" prefHeight="42.0" prefWidth="303.0" styleClass="login-btn" stylesheets="@loginDegine.css" text="proceed" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="fp_back" layoutX="142.0" layoutY="517.0" mnemonicParsing="false" onAction="#backToLoginForm" prefHeight="17.0" prefWidth="116.0" styleClass="gradient" stylesheets="@loginDegine.css" text="Back" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="fp_username" layoutX="43.0" layoutY="202.0" onAction="#proceedBtn" prefHeight="42.0" prefWidth="303.0" promptText="Username" styleClass="textfield" stylesheets="@loginDegine.css">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="np_newPassForm" layoutX="405.0" layoutY="5.0" prefHeight="600.0" prefWidth="400.0" visible="false">
+               <children>
+                  <Label layoutX="43.0" layoutY="112.0" styleClass="head-label" stylesheets="@loginDegine.css" text="Set new Password" textFill="#0f7918">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="np_newPassword" layoutX="43.0" layoutY="190.0" onAction="#changePassBtn" prefHeight="42.0" prefWidth="303.0" promptText="New Password" styleClass="textfield" stylesheets="@loginDegine.css">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </PasswordField>
+                  <PasswordField fx:id="np_confirmPassword" layoutX="43.0" layoutY="258.0" onAction="#changePassBtn" prefHeight="42.0" prefWidth="303.0" promptText="Confirmation Password" styleClass="textfield" stylesheets="@loginDegine.css">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </PasswordField>
+                  <Button fx:id="np_changePassBtn" layoutX="49.0" layoutY="328.0" mnemonicParsing="false" onAction="#changePassBtn" prefHeight="46.0" prefWidth="303.0" styleClass="login-btn" stylesheets="@loginDegine.css" text="Change Password" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="np_back" layoutX="142.0" layoutY="517.0" mnemonicParsing="false" onAction="#backToQuestionForm" prefHeight="17.0" prefWidth="116.0" styleClass="gradient" stylesheets="@loginDegine.css" text="Back" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="side_form" prefHeight="600.0" prefWidth="400.0" styleClass="gradient" stylesheets="@loginDegine.css">
+               <children>
+                  <Label fx:id="create_accountText" layoutX="97.0" layoutY="436.0" stylesheets="@loginDegine.css" text="Create Account .. ." textFill="#2d5172">
+                     <font>
+                        <Font name="System Bold Italic" size="29.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="AlreadyHave_text" layoutX="48.0" layoutY="440.0" stylesheets="@loginDegine.css" text="Already, Have an Account?" textFill="#793333" visible="false">
+                     <font>
+                        <Font name="System Bold Italic" size="25.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="side_CreateBtn" layoutX="48.0" layoutY="502.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="42.0" prefWidth="315.0" styleClass="create-btn" stylesheets="@loginDegine.css" text="Create a new account" textFill="#0d0b0b">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="side_alreadyHave" layoutX="48.0" layoutY="502.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="42.0" prefWidth="315.0" styleClass="create-btn" stylesheets="@loginDegine.css" text="Back to Login Page" textFill="WHITE" visible="false">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="263.0" fitWidth="300.0" layoutX="43.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Img/logo.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="49.0" layoutY="221.0" stylesheets="@loginDegine.css" text="Baust Question Bank" textFill="#6f6868">
+                     <font>
+                        <Font name="System Bold" size="31.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

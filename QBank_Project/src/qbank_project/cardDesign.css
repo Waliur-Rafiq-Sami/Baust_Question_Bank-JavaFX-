@@ -1,0 +1,49 @@
+
+
+.card{
+    -fx-background-color: #fff;
+    -fx-background-radius: 5px;
+}
+.shadow{
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 5,0,0,0);
+}
+.btn,
+.view-btn,
+.download-btn {
+    -fx-pref-width: 90px;
+    -fx-pref-height: 10px;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8px;
+}
+
+/* Green General Button */
+.btn {
+    -fx-background-color: linear-gradient(to bottom right, #098c53, #246861);
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+}
+.btn:hover {
+    -fx-background-color: linear-gradient(to bottom right, #0fb565, #399a8f);
+}
+
+/* Blue View Button */
+.view-btn {
+    -fx-background-color: linear-gradient(to bottom right, #1e3c72, #2a5298);
+    -fx-cursor: hand;
+    -fx-text-fill: #ffffff;
+}
+.view-btn:hover {
+    -fx-background-color: linear-gradient(to bottom right, #1fa2ff, #12d8fa);
+}
+
+/* Orange-Red Download Button */
+.download-btn {
+    -fx-background-color: linear-gradient(to bottom right, #f12711, #f5af19);
+    -fx-cursor: hand;
+    -fx-text-fill: #ffffff;
+}
+.download-btn:hover {
+    -fx-background-color: linear-gradient(to bottom right, #ff416c, #ff4b2b);
+}
+

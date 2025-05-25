@@ -1,0 +1,744 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="qbank_project.mainFormController">
+    <children>
+        <AnchorPane fx:id="main_form" prefHeight="200.0" prefWidth="200.0">
+            <children>
+                <BorderPane layoutX="255.0" layoutY="78.0" prefHeight="600.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <left>
+                        <AnchorPane prefHeight="600.0" prefWidth="222.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <AnchorPane layoutX="11.0" layoutY="161.0" prefHeight="600.0" prefWidth="293.0" styleClass="nav-form" stylesheets="@mainFormStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <Button fx:id="HomePage_btn" layoutX="25.0" layoutY="232.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="40.0" prefWidth="248.0" styleClass="nav-btn" stylesheets="@mainFormStyle.css" text="Home" />
+                                        <Button fx:id="AddQuestion_btn" layoutX="26.0" layoutY="300.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="40.0" prefWidth="246.0" styleClass="nav-btn" stylesheets="@mainFormStyle.css" text="Add Question" />
+                                        <Button fx:id="viewAllQuestion_btn" layoutX="22.0" layoutY="362.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="40.0" prefWidth="249.0" styleClass="nav-btn" stylesheets="@mainFormStyle.css" text="View All Question" />
+                                        <Button fx:id="About_btn" layoutX="25.0" layoutY="430.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="40.0" prefWidth="249.0" styleClass="nav-btn" stylesheets="@mainFormStyle.css" text="About" />
+                                        <Button fx:id="logout_btn" layoutX="27.0" layoutY="554.0" mnemonicParsing="false" onAction="#logout" prefHeight="41.0" prefWidth="239.0" stylesheets="@mainFormStyle.css" text="Sign Out" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="27.0">
+                                            <graphic>
+
+                                            </graphic>
+                                            <styleClass>
+                                                <String fx:value="logout" />
+                                                <String fx:value="shadow" />
+                                                <String fx:value="sign-outBtn" />
+                                            </styleClass>
+                                        </Button>
+                                        <AnchorPane layoutX="2.0" prefHeight="123.0" prefWidth="291.0" styleClass="header" stylesheets="@mainFormStyle.css">
+                                            <children>
+                                                <Label layoutX="101.0" layoutY="90.0" prefHeight="26.0" prefWidth="172.0" text="Baust Question Bank">
+                                                    <font>
+                                                        <Font name="System Bold" size="17.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label layoutX="14.0" layoutY="86.0" prefHeight="34.0" prefWidth="87.0" text="Welcome," textFill="#37a831">
+                                                    <font>
+                                                        <Font name="System Bold Italic" size="18.0" />
+                                                    </font>
+                                                </Label>
+                                                <ImageView fitHeight="199.0" fitWidth="317.0" layoutX="27.0" layoutY="-46.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@Img/logo.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </children>
+                                        </AnchorPane>
+                                        <Label layoutX="17.0" layoutY="177.0" prefHeight="34.0" prefWidth="100.0" text="Welcome, " textFill="#30fffe">
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="username" layoutX="102.0" layoutY="179.0" prefHeight="32.0" prefWidth="126.0" text="MarcoMan" textFill="#d6ff00">
+                                            <font>
+                                                <Font name="System Bold Italic" size="20.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </left>
+                    <center>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <AnchorPane fx:id="HomePage" layoutX="196.0" layoutY="185.0" prefHeight="600.0" prefWidth="878.0" styleClass="ocean-breeze-bg" stylesheets="@mainFormStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="169.0" prefWidth="851.0" stylesheets="@mainFormDesign.css" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="14.0">
+                                            <styleClass>
+                                                <String fx:value="white-bg" />
+                                                <String fx:value="radius" />
+                                                <String fx:value="shadow" />
+                                            </styleClass>
+                                            <children>
+                                                <ScrollPane layoutX="300.0" prefHeight="169.0" prefWidth="778.0" styleClass="transparent" stylesheets="@mainFormDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="0.0">
+                                                    <content>
+                                                        <AnchorPane prefHeight="154.0" prefWidth="2919.0" styleClass="main_bg" stylesheets="@mainFormStyle.css">
+                                                            <children>
+                                                                <AnchorPane layoutX="14.0" layoutY="12.0" prefHeight="130.0" prefWidth="267.0" styleClass="cream-bg" stylesheets="@mainFormStyle.css">
+                                                                    <children>
+                                                                        <ImageView fitHeight="136.0" fitWidth="121.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                                            <image>
+                                                                                <Image url="@Img/headOfDept.jpg" />
+                                                                            </image>
+                                                                        </ImageView>
+                                                                        <Label layoutX="113.0" layoutY="-1.0" prefHeight="47.0" prefWidth="231.0" text="Dr. Md Nakib Hayat Chowdhury" textFill="#17c935">
+                                                                            <font>
+                                                                                <Font name="System Bold Italic" size="12.0" />
+                                                                            </font>
+                                                                        </Label>
+                                                                        <Label layoutX="113.0" layoutY="29.0" prefHeight="29.0" prefWidth="164.0" text="Head of the Dept." textFill="#d33e3e">
+                                                                            <font>
+                                                                                <Font name="System Bold Italic" size="12.0" />
+                                                                            </font>
+                                                                        </Label>
+                                                                        <Label layoutX="114.0" layoutY="51.0" prefHeight="26.0" prefWidth="198.0" text="Department of Computer Science " textFill="#449cd7">
+                                                                            <font>
+                                                                                <Font name="System Bold Italic" size="12.0" />
+                                                                            </font>
+                                                                        </Label>
+                                                                        <Label layoutX="114.0" layoutY="64.0" prefHeight="26.0" prefWidth="176.0" text="and Engineering" textFill="#449cd7">
+                                                                            <font>
+                                                                                <Font name="System Bold Italic" size="12.0" />
+                                                                            </font>
+                                                                        </Label>
+                                                                        <Label layoutX="114.0" layoutY="90.0" prefHeight="22.0" prefWidth="215.0" text="Bangladesh Army University of Science" textFill="#2d52a8">
+                                                                            <font>
+                                                                                <Font name="System Bold Italic" size="12.0" />
+                                                                            </font>
+                                                                        </Label>
+                                                                        <Label layoutX="111.0" layoutY="102.0" prefHeight="28.0" prefWidth="201.0" text=" and Technology (BAUST)" textFill="#2d52a8">
+                                                                            <font>
+                                                                                <Font name="System Bold Italic" size="12.0" />
+                                                                            </font>
+                                                                        </Label>
+                                                                    </children>
+                                                                </AnchorPane>
+                                                                <AnchorPane layoutX="373.0" layoutY="12.0" prefHeight="136.0" prefWidth="344.0" styleClass="cream-bg" stylesheets="@mainFormStyle.css">
+                                                                    <children>
+                                                                        <ImageView fitHeight="135.0" fitWidth="113.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                                                                            <image>
+                                                                                <Image url="@Img/d2.png" />
+                                                                            </image>
+                                                                        </ImageView>
+                                                                        <Label layoutX="119.0" layoutY="-1.0" prefHeight="47.0" prefWidth="225.0" text="Professor Dr. S.M. Jahangir Alam" textFill="#17c935">
+                                                                            <font>
+                                                                                <Font name="System Bold Italic" size="12.0" />
+                                                                            </font>
+                                                                        </Label>
+                                                                        <Label layoutX="118.0" layoutY="29.0" prefHeight="29.0" prefWidth="159.0" text="Professor" textFill="#d33e3e">
+                                                                            <font>
+                                                                                <Font name="System Bold Italic" size="12.0" />
+                                                                            </font>
+                                                                        </Label>
+                                                                        <Label layoutX="117.0" layoutY="51.0" prefHeight="26.0" prefWidth="224.0" text="Ph.D. (Doctor of Engineering)" textFill="#449cd7">
+                                                                            <font>
+                                                                                <Font name="System Bold Italic" size="12.0" />
+                                                                            </font>
+                                                                        </Label>
+                                                                        <Label layoutX="118.0" layoutY="64.0" prefHeight="26.0" prefWidth="205.0" text="Xiamen University, China" textFill="#449cd7">
+                                                                            <font>
+                                                                                <Font name="System Bold Italic" size="12.0" />
+                                                                            </font>
+                                                                        </Label>
+                                                                        <Label layoutX="120.0" layoutY="90.0" prefHeight="22.0" prefWidth="209.0" text="Mobile: 01766128002" textFill="#2d52a8">
+                                                                            <font>
+                                                                                <Font name="System Bold Italic" size="12.0" />
+                                                                            </font>
+                                                                        </Label>
+                                                                        <Label layoutX="119.0" layoutY="102.0" prefHeight="28.0" prefWidth="193.0" text="E-mail: jahangir@baust.edu.bd" textFill="#2d52a8">
+                                                                            <font>
+                                                                                <Font name="System Bold Italic" size="12.0" />
+                                                                            </font>
+                                                                        </Label>
+                                                                    </children>
+                                                                </AnchorPane>
+                                                                <AnchorPane layoutX="731.0" layoutY="14.0" prefHeight="130.0" prefWidth="267.0" styleClass="cream-bg" stylesheets="@mainFormStyle.css">
+                                                                    <children>
+                                                                        <ImageView fitHeight="136.0" fitWidth="121.0" pickOnBounds="true" preserveRatio="true">
+                                                                            <image>
+                                                                                <Image url="@Img/d3.png" />
+                                                                            </image>
+                                                                        </ImageView>
+                                                                        <Label layoutX="121.0" layoutY="-1.0" prefHeight="47.0" prefWidth="223.0" text="Dr. Engr. Mohammed Sowket Ali" textFill="#17c935">
+                                                                            <font>
+                                                                                <Font name="System Bold Italic" size="12.0" />
+                                                                            </font>
+                                                                        </Label>
+                                                                        <Label layoutX="120.0" layoutY="29.0" prefHeight="29.0" prefWidth="157.0" text=" Associate Professor" textFill="#d33e3e">
+                                                                            <font>
+                                                                                <Font name="System Bold Italic" size="12.0" />
+                                                                            </font>
+                                                                        </Label>
+                                                                        <Label layoutX="119.0" layoutY="51.0" prefHeight="26.0" prefWidth="222.0" text="PhD. (South Korea)" textFill="#449cd7">
+                                                                            <font>
+                                                                                <Font name="System Bold Italic" size="12.0" />
+                                                                            </font>
+                                                                        </Label>
+                                                                        <Label layoutX="119.0" layoutY="64.0" prefHeight="26.0" prefWidth="204.0" textFill="#449cd7">
+                                                                            <font>
+                                                                                <Font name="System Bold Italic" size="12.0" />
+                                                                            </font>
+                                                                        </Label>
+                                                                        <Label layoutX="120.0" layoutY="90.0" prefHeight="22.0" prefWidth="209.0" text="Mobile: +8801791895371" textFill="#2d52a8">
+                                                                            <font>
+                                                                                <Font name="System Bold Italic" size="12.0" />
+                                                                            </font>
+                                                                        </Label>
+                                                                        <Label layoutX="121.0" layoutY="102.0" prefHeight="28.0" prefWidth="191.0" text="E-mail: sowket@baust.edu.bd" textFill="#2d52a8">
+                                                                            <font>
+                                                                                <Font name="System Bold Italic" size="12.0" />
+                                                                            </font>
+                                                                        </Label>
+                                                                    </children>
+                                                                </AnchorPane>
+                                                                <AnchorPane layoutX="1083.0" layoutY="13.0" prefHeight="130.0" prefWidth="267.0" styleClass="cream-bg" stylesheets="@mainFormStyle.css">
+                                                                    <children>
+                                                                        <ImageView fitHeight="136.0" fitWidth="127.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                                            <image>
+                                                                                <Image url="@Img/d4.png" />
+                                                                            </image>
+                                                                        </ImageView>
+                                                                        <Label layoutX="121.0" layoutY="-1.0" prefHeight="47.0" prefWidth="223.0" text="Engr. Md. Mamun Hossain" textFill="#17c935">
+                                                                            <font>
+                                                                                <Font name="System Bold Italic" size="12.0" />
+                                                                            </font>
+                                                                        </Label>
+                                                                        <Label layoutX="121.0" layoutY="29.0" prefHeight="29.0" prefWidth="156.0" text="Associate Professor" textFill="#d33e3e">
+                                                                            <font>
+                                                                                <Font name="System Bold Italic" size="12.0" />
+                                                                            </font>
+                                                                        </Label>
+                                                                        <Label layoutX="119.0" layoutY="51.0" prefHeight="26.0" prefWidth="220.0" text=" Ph.D. in CSE, RUET, M.Sc." textFill="#449cd7">
+                                                                            <font>
+                                                                                <Font name="System Bold Italic" size="12.0" />
+                                                                            </font>
+                                                                        </Label>
+                                                                        <Label layoutX="122.0" layoutY="64.0" prefHeight="26.0" prefWidth="210.0" text="in CSE &amp; B.Sc. Engg. in CSE, SUST." textFill="#449cd7">
+                                                                            <font>
+                                                                                <Font name="System Bold Italic" size="12.0" />
+                                                                            </font>
+                                                                        </Label>
+                                                                        <Label layoutX="121.0" layoutY="90.0" prefHeight="22.0" prefWidth="208.0" text="Mobile: 01769662713" textFill="#2d52a8">
+                                                                            <font>
+                                                                                <Font name="System Bold Italic" size="12.0" />
+                                                                            </font>
+                                                                        </Label>
+                                                                        <Label layoutX="121.0" layoutY="102.0" prefHeight="28.0" prefWidth="191.0" text="E-mail: mhossain@baust.edu.bd" textFill="#2d52a8">
+                                                                            <font>
+                                                                                <Font name="System Bold Italic" size="12.0" />
+                                                                            </font>
+                                                                        </Label>
+                                                                    </children>
+                                                                </AnchorPane>
+                                                                <AnchorPane layoutX="1442.0" layoutY="13.0" prefHeight="130.0" prefWidth="267.0" styleClass="cream-bg" stylesheets="@mainFormStyle.css">
+                                                                    <children>
+                                                                        <ImageView fitHeight="136.0" fitWidth="129.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                                            <image>
+                                                                                <Image url="@Img/d5.png" />
+                                                                            </image>
+                                                                        </ImageView>
+                                                                        <Label layoutX="128.0" layoutY="-1.0" prefHeight="47.0" prefWidth="216.0" text="Engr. Md. Al-Hasan" textFill="#17c935">
+                                                                            <font>
+                                                                                <Font name="System Bold Italic" size="12.0" />
+                                                                            </font>
+                                                                        </Label>
+                                                                        <Label layoutX="128.0" layoutY="29.0" prefHeight="29.0" prefWidth="149.0" text="Assistant Professor" textFill="#d33e3e">
+                                                                            <font>
+                                                                                <Font name="System Bold Italic" size="12.0" />
+                                                                            </font>
+                                                                        </Label>
+                                                                        <Label layoutX="127.0" layoutY="51.0" prefHeight="26.0" prefWidth="214.0" text="PhD in CSE, M.Sc. in CSE," textFill="#449cd7">
+                                                                            <font>
+                                                                                <Font name="System Bold Italic" size="12.0" />
+                                                                            </font>
+                                                                        </Label>
+                                                                        <Label layoutX="125.0" layoutY="64.0" prefHeight="26.0" prefWidth="198.0" text=" B. Sc. in CSE (CUET)" textFill="#449cd7">
+                                                                            <font>
+                                                                                <Font name="System Bold Italic" size="12.0" />
+                                                                            </font>
+                                                                        </Label>
+                                                                        <Label layoutX="129.0" layoutY="90.0" prefHeight="22.0" prefWidth="200.0" text="Mobile: +8801722-774004 (Pers)" textFill="#2d52a8">
+                                                                            <font>
+                                                                                <Font name="System Bold Italic" size="12.0" />
+                                                                            </font>
+                                                                        </Label>
+                                                                        <Label layoutX="128.0" layoutY="102.0" prefHeight="28.0" prefWidth="184.0" text="E-mail: al-hasan@baust.edu.bd" textFill="#2d52a8">
+                                                                            <font>
+                                                                                <Font name="System Bold Italic" size="12.0" />
+                                                                            </font>
+                                                                        </Label>
+                                                                    </children>
+                                                                </AnchorPane>
+                                                                <AnchorPane layoutX="1800.0" layoutY="15.0" prefHeight="130.0" prefWidth="267.0" styleClass="cream-bg" stylesheets="@mainFormStyle.css">
+                                                                    <children>
+                                                                        <ImageView fitHeight="136.0" fitWidth="121.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                                            <image>
+                                                                                <Image url="@Img/d7.png" />
+                                                                            </image>
+                                                                        </ImageView>
+                                                                        <Label layoutX="120.0" layoutY="-1.0" prefHeight="47.0" prefWidth="224.0" text="Md. Mahadi Hasan" textFill="#17c935">
+                                                                            <font>
+                                                                                <Font name="System Bold Italic" size="12.0" />
+                                                                            </font>
+                                                                        </Label>
+                                                                        <Label layoutX="120.0" layoutY="29.0" prefHeight="29.0" prefWidth="157.0" text="Lecturer" textFill="#d33e3e">
+                                                                            <font>
+                                                                                <Font name="System Bold Italic" size="12.0" />
+                                                                            </font>
+                                                                        </Label>
+                                                                        <Label layoutX="121.0" layoutY="51.0" prefHeight="26.0" prefWidth="220.0" text="B.Sc. Engg. in CSE, CUET" textFill="#449cd7">
+                                                                            <font>
+                                                                                <Font name="System Bold Italic" size="12.0" />
+                                                                            </font>
+                                                                        </Label>
+                                                                        <Label layoutX="121.0" layoutY="64.0" prefHeight="26.0" prefWidth="202.0" text="M.Sc. Engg. in CSE, RUET (Ongoing)" textFill="#449cd7">
+                                                                            <font>
+                                                                                <Font name="System Bold Italic" size="12.0" />
+                                                                            </font>
+                                                                        </Label>
+                                                                        <Label layoutX="121.0" layoutY="90.0" prefHeight="22.0" prefWidth="208.0" text="Mobile: 01303516351" textFill="#2d52a8">
+                                                                            <font>
+                                                                                <Font name="System Bold Italic" size="12.0" />
+                                                                            </font>
+                                                                        </Label>
+                                                                        <Label layoutX="121.0" layoutY="102.0" prefHeight="28.0" prefWidth="217.0" text="E-mail: mahadihasan@baust.edu.bd" textFill="#2d52a8">
+                                                                            <font>
+                                                                                <Font name="System Bold Italic" size="12.0" />
+                                                                            </font>
+                                                                        </Label>
+                                                                    </children>
+                                                                </AnchorPane>
+                                                                <AnchorPane layoutX="2154.0" layoutY="15.0" prefHeight="130.0" prefWidth="267.0" styleClass="cream-bg" stylesheets="@mainFormStyle.css">
+                                                                    <children>
+                                                                        <ImageView fitHeight="136.0" fitWidth="121.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                                            <image>
+                                                                                <Image url="@Img/d6.png" />
+                                                                            </image>
+                                                                        </ImageView>
+                                                                        <Label layoutX="120.0" layoutY="-1.0" prefHeight="47.0" prefWidth="224.0" text="Md Zahim Hassan" textFill="#17c935">
+                                                                            <font>
+                                                                                <Font name="System Bold Italic" size="12.0" />
+                                                                            </font>
+                                                                        </Label>
+                                                                        <Label layoutX="121.0" layoutY="29.0" prefHeight="29.0" prefWidth="156.0" text="Lecturer" textFill="#d33e3e">
+                                                                            <font>
+                                                                                <Font name="System Bold Italic" size="12.0" />
+                                                                            </font>
+                                                                        </Label>
+                                                                        <Label layoutX="120.0" layoutY="51.0" prefHeight="26.0" prefWidth="221.0" text="M.Sc.(Engg.) in CSE, RUET" textFill="#449cd7">
+                                                                            <font>
+                                                                                <Font name="System Bold Italic" size="12.0" />
+                                                                            </font>
+                                                                        </Label>
+                                                                        <Label layoutX="120.0" layoutY="64.0" prefHeight="26.0" prefWidth="203.0" text="B.Sc.(Engg.) in CSE, KUET" textFill="#449cd7">
+                                                                            <font>
+                                                                                <Font name="System Bold Italic" size="12.0" />
+                                                                            </font>
+                                                                        </Label>
+                                                                        <Label layoutX="121.0" layoutY="90.0" prefHeight="22.0" prefWidth="208.0" text="Mobile: 01736393334" textFill="#2d52a8">
+                                                                            <font>
+                                                                                <Font name="System Bold Italic" size="12.0" />
+                                                                            </font>
+                                                                        </Label>
+                                                                        <Label layoutX="122.0" layoutY="102.0" prefHeight="28.0" prefWidth="190.0" text="E-mail: zahimhassan@baust.edu.bd" textFill="#2d52a8">
+                                                                            <font>
+                                                                                <Font name="System Bold Italic" size="12.0" />
+                                                                            </font>
+                                                                        </Label>
+                                                                    </children>
+                                                                </AnchorPane>
+                                                                <AnchorPane layoutX="2512.0" layoutY="17.0" prefHeight="130.0" prefWidth="267.0" styleClass="cream-bg" stylesheets="@mainFormStyle.css">
+                                                                    <children>
+                                                                        <ImageView fitHeight="136.0" fitWidth="121.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                                            <image>
+                                                                                <Image url="@Img/d8.png" />
+                                                                            </image>
+                                                                        </ImageView>
+                                                                        <Label layoutX="121.0" layoutY="-1.0" prefHeight="47.0" prefWidth="223.0" text="Anite Halim Sagor" textFill="#17c935">
+                                                                            <font>
+                                                                                <Font name="System Bold Italic" size="12.0" />
+                                                                            </font>
+                                                                        </Label>
+                                                                        <Label layoutX="121.0" layoutY="29.0" prefHeight="29.0" prefWidth="156.0" text="Lecturer" textFill="#d33e3e">
+                                                                            <font>
+                                                                                <Font name="System Bold Italic" size="12.0" />
+                                                                            </font>
+                                                                        </Label>
+                                                                        <Label layoutX="118.0" layoutY="51.0" prefHeight="26.0" prefWidth="223.0" text=" B.Sc. Engg. in CSE, BAUST" textFill="#449cd7">
+                                                                            <font>
+                                                                                <Font name="System Bold Italic" size="12.0" />
+                                                                            </font>
+                                                                        </Label>
+                                                                        <Label layoutX="121.0" layoutY="64.0" prefHeight="26.0" prefWidth="202.0" text="M.Sc. Engg. in CSE , KUET (Pursing)" textFill="#449cd7">
+                                                                            <font>
+                                                                                <Font name="System Bold Italic" size="12.0" />
+                                                                            </font>
+                                                                        </Label>
+                                                                        <Label layoutX="121.0" layoutY="90.0" prefHeight="22.0" prefWidth="208.0" text="Mobile: 01784055149" textFill="#2d52a8">
+                                                                            <font>
+                                                                                <Font name="System Bold Italic" size="12.0" />
+                                                                            </font>
+                                                                        </Label>
+                                                                        <Label layoutX="121.0" layoutY="102.0" prefHeight="28.0" prefWidth="191.0" text="E-mail: anitehalim@gmail.com" textFill="#2d52a8">
+                                                                            <font>
+                                                                                <Font name="System Bold Italic" size="12.0" />
+                                                                            </font>
+                                                                        </Label>
+                                                                    </children>
+                                                                </AnchorPane>
+                                                            </children>
+                                                        </AnchorPane>
+                                                    </content>
+                                                </ScrollPane>
+                                            </children>
+                                        </AnchorPane>
+                                        <AnchorPane layoutX="15.0" layoutY="208.0" prefHeight="378.0" prefWidth="655.0" stylesheets="@mainFormDesign.css" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="208.0">
+                                            <styleClass>
+                                                <String fx:value="white-bg" />
+                                                <String fx:value="radius" />
+                                                <String fx:value="shadow" />
+                                            </styleClass>
+                                 <children>
+                                    <ScrollPane layoutX="6.0" layoutY="14.0" prefHeight="200.0" prefWidth="770.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <content>
+                                          <ImageView fitHeight="726.0" fitWidth="1011.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@Img/cR.png" />
+                                             </image>
+                                          </ImageView>
+                                       </content>
+                                    </ScrollPane>
+                                 </children>
+                                        </AnchorPane>
+                                        <Separator layoutX="14.0" layoutY="193.0" prefHeight="3.0" prefWidth="851.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="193.0" />
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane fx:id="AddQuestionForm" layoutX="72.0" layoutY="200.0" prefHeight="600.0" prefWidth="878.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <AnchorPane layoutX="15.0" layoutY="14.0" prefHeight="286.0" prefWidth="849.0" stylesheets="@mainFormDesign.css" AnchorPane.bottomAnchor="300.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+                                            <styleClass>
+                                                <String fx:value="white-bg" />
+                                                <String fx:value="radius" />
+                                                <String fx:value="shadow" />
+                                            </styleClass>
+                                            <children>
+                                                <TableView fx:id="QuestionTable" layoutX="18.0" layoutY="16.0" onMouseClicked="#inventorySelectData" prefHeight="254.0" prefWidth="814.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="18.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="16.0">
+                                                    <columns>
+                                                        <TableColumn fx:id="Add_question_depertment" prefWidth="86.0" text="Depertment" />
+                                                        <TableColumn fx:id="Add_question_CourseTittle" prefWidth="115.0" text="Course Title" />
+                                                        <TableColumn fx:id="Add_question_Type" prefWidth="128.0" text="Type" />
+                                                        <TableColumn fx:id="Add_question_Batch" prefWidth="93.0" text="Batch" />
+                                                        <TableColumn fx:id="Add_question_Role" prefWidth="121.0" text="Role" />
+                                                        <TableColumn fx:id="Add_question_Date" prefWidth="121.0" text="Date" />
+                                                        <TableColumn fx:id="Add_question_Code" prefWidth="100.0" text="Code" />
+                                                    </columns>
+                                                    <columnResizePolicy>
+
+                                                    </columnResizePolicy>
+                                                </TableView>
+                                            </children>
+                                        </AnchorPane>
+                                        <AnchorPane layoutX="15.0" layoutY="325.0" prefHeight="261.0" prefWidth="849.0" stylesheets="@mainFormDesign.css" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="14.0">
+                                            <styleClass>
+                                                <String fx:value="white-bg" />
+                                                <String fx:value="radius" />
+                                                <String fx:value="shadow" />
+                                            </styleClass>
+                                            <children>
+                                                <Label layoutX="48.0" layoutY="30.0" prefHeight="20.0" prefWidth="83.0" text="Depertment">
+                                                    <font>
+                                                        <Font size="14.0" />
+                                                    </font>
+                                                </Label>
+                                                <TextField fx:id="inpit_Depertment" layoutX="134.0" layoutY="28.0" prefHeight="25.0" prefWidth="128.0" />
+                                                <Label layoutX="42.0" layoutY="70.0" prefHeight="20.0" prefWidth="84.0" text="Course Tittle">
+                                                    <font>
+                                                        <Font size="14.0" />
+                                                    </font>
+                                                </Label>
+                                                <TextField fx:id="input_CourseTittle" layoutX="134.0" layoutY="67.0" prefHeight="25.0" prefWidth="168.0" />
+                                                <Label layoutX="91.0" layoutY="110.0" text="Type:">
+                                                    <font>
+                                                        <Font size="14.0" />
+                                                    </font>
+                                                </Label>
+                                                <ComboBox fx:id="input_QuestionType" layoutX="134.0" layoutY="107.0" prefHeight="25.0" prefWidth="168.0" promptText="Choose Type..." />
+                                                <Label layoutX="384.0" layoutY="31.0" prefHeight="20.0" prefWidth="39.0" text="Batch">
+                                                    <font>
+                                                        <Font size="14.0" />
+                                                    </font>
+                                                </Label>
+                                                <TextField fx:id="input_Batch" layoutX="432.0" layoutY="28.0" prefHeight="25.0" prefWidth="168.0" promptText="18" />
+                                                <Label layoutX="381.0" layoutY="70.0" prefHeight="20.0" prefWidth="44.0" text="Code">
+                                                    <font>
+                                                        <Font size="14.0" />
+                                                    </font>
+                                                </Label>
+                                                <TextField fx:id="input_Code" layoutX="432.0" layoutY="68.0" prefHeight="25.0" prefWidth="168.0" promptText="2101" />
+                                                <AnchorPane layoutX="700.0" layoutY="26.0" prefHeight="117.0" prefWidth="120.0" stylesheets="@mainFormDesign.css" AnchorPane.rightAnchor="29.0">
+                                                    <styleClass>
+                                                        <String fx:value="white-bg" />
+                                                        <String fx:value="shadow" />
+                                                    </styleClass>
+                                                    <children>
+                                                        <ImageView fx:id="inventory_imageView" fitHeight="127.0" fitWidth="120.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true" />
+                                                    </children>
+                                                </AnchorPane>
+                                                <Button fx:id="input_Image" layoutX="711.0" layoutY="163.0" mnemonicParsing="false" onAction="#QuestionimputBtn" prefHeight="26.0" prefWidth="99.0" styleClass="btn" stylesheets="@mainFormDesign.css" text="Import" AnchorPane.rightAnchor="39.0" />
+                                                <Button fx:id="input_addBtn" layoutX="56.0" layoutY="189.0" mnemonicParsing="false" onAction="#AddQuestionBtn" prefHeight="41.0" prefWidth="112.0" styleClass="btn" stylesheets="@mainFormDesign.css" text="Add" AnchorPane.bottomAnchor="31.0" />
+                                                <Button layoutX="206.0" layoutY="189.0" mnemonicParsing="false" onAction="#UpdateQuestionBtn" prefHeight="41.0" prefWidth="112.0" styleClass="btn" stylesheets="@mainFormDesign.css" text="Update" AnchorPane.bottomAnchor="31.0" />
+                                                <Button layoutX="351.0" layoutY="189.0" mnemonicParsing="false" onAction="#clearQuestionBtn" prefHeight="41.0" prefWidth="112.0" styleClass="btn" stylesheets="@mainFormDesign.css" text="Clear" AnchorPane.bottomAnchor="31.0" />
+                                                <Button layoutX="488.0" layoutY="189.0" mnemonicParsing="false" onAction="#DeleteQuestionBtn" prefHeight="41.0" prefWidth="112.0" styleClass="btn" stylesheets="@mainFormDesign.css" text="Delete" AnchorPane.bottomAnchor="31.0" />
+                                                <Label layoutX="386.0" layoutY="112.0" text="Status:">
+                                                    <font>
+                                                        <Font size="14.0" />
+                                                    </font>
+                                                </Label>
+                                                <ComboBox fx:id="Question_status" layoutX="432.0" layoutY="108.0" prefHeight="25.0" prefWidth="168.0" promptText="Choose Status..." />
+                                            </children>
+                                        </AnchorPane>
+                                        <Separator layoutX="14.0" layoutY="312.0" prefHeight="5.0" prefWidth="852.0" AnchorPane.bottomAnchor="283.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="12.0" />
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane fx:id="ViewFrom" layoutX="113.0" layoutY="181.0" prefHeight="600.0" prefWidth="878.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <AnchorPane layoutX="14.0" layoutY="17.0" prefHeight="566.0" prefWidth="512.0" stylesheets="@mainFormDesign.css" AnchorPane.bottomAnchor="17.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="352.0" AnchorPane.topAnchor="17.0">
+                                            <styleClass>
+                                                <String fx:value="white-bg" />
+                                                <String fx:value="shadow" />
+                                                <String fx:value="radius" />
+                                            </styleClass>
+                                            <children>
+                                                <ScrollPane fx:id="ViewQuestion_scrollPane" layoutX="13.0" layoutY="14.0" prefHeight="538.0" prefWidth="486.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="14.0">
+                                                    <content>
+                                                        <GridPane fx:id="menu_gridPane" prefHeight="13.0" prefWidth="77.0">
+                                                            <columnConstraints>
+                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                            </columnConstraints>
+                                                        </GridPane>
+                                                    </content>
+                                                </ScrollPane>
+                                            </children>
+                                        </AnchorPane>
+                                        <AnchorPane layoutX="544.0" layoutY="17.0" prefHeight="566.0" prefWidth="320.0" stylesheets="@mainFormDesign.css" AnchorPane.bottomAnchor="17.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="17.0">
+                                            <styleClass>
+                                                <String fx:value="white-bg" />
+                                                <String fx:value="shadow" />
+                                                <String fx:value="radius" />
+                                            </styleClass>
+                                            <children>
+                                                <TableView fx:id="ViewPageTablle" layoutX="13.0" layoutY="14.0" onMouseClicked="#menuSelectOrder" prefHeight="479.0" prefWidth="295.0" AnchorPane.bottomAnchor="73.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="14.0">
+                                                    <columns>
+                                                        <TableColumn fx:id="ViewPageTittle" prefWidth="81.0" text="Tittle" />
+                                                        <TableColumn fx:id="ViewPageType" prefWidth="58.0" text="Type" />
+                                                        <TableColumn fx:id="ViewPageBatch" prefWidth="154.0" text="Batch" />
+                                                    </columns>
+                                                </TableView>
+                                                <Button layoutX="17.0" layoutY="509.0" mnemonicParsing="false" onAction="#viewRemoveBtn" prefHeight="37.0" prefWidth="287.0" stylesheets="@mainFormStyle.css" text="Remove" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="16.0">
+                                                    <styleClass>
+                                                        <String fx:value="logout" />
+                                                        <String fx:value="shadow" />
+                                                        <String fx:value="sign-outBtn" />
+                                                    </styleClass>
+                                                </Button>
+                                            </children>
+                                        </AnchorPane>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane fx:id="customers_form" layoutX="114.0" layoutY="128.0" prefHeight="600.0" prefWidth="817.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <AnchorPane layoutX="21.0" layoutY="21.0" prefHeight="775.0" prefWidth="762.0" stylesheets="@mainFormDesign.css" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                            <styleClass>
+                                                <String fx:value="white-bg" />
+                                                <String fx:value="shadow" />
+                                                <String fx:value="radius" />
+                                            </styleClass>
+                                            <children>
+                                                <Label layoutX="18.0" layoutY="14.0" text="About Us" AnchorPane.leftAnchor="18.0" AnchorPane.topAnchor="14.0">
+                                                    <font>
+                                                        <Font name="System Bold Italic" size="20.0" />
+                                                    </font>
+                                                </Label>
+                                                <Separator layoutX="18.0" layoutY="43.0" prefHeight="5.0" prefWidth="721.0" />
+                                                <ScrollPane layoutX="14.0" layoutY="53.0" prefHeight="492.0" prefWidth="727.0" stylesheets="@mainFormDesign.css" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="53.0">
+                                                    <styleClass>
+                                                        <String fx:value="white-bg" />
+                                                        <String fx:value="radius" />
+                                                    </styleClass>
+                                       <content>
+                                          <AnchorPane prefHeight="1008.0" prefWidth="725.0">
+                                             <children>
+                                                <Text layoutX="15.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The Baust Question Bank (QBank) is a dedicated desktop application developed to serve the students and faculty members of the Bangladesh Army University of Science and Technology (BAUST). Designed with user-centric functionality in mind, QBank offers a centralized platform to store, access, and manage all academic question papers — from CTs to Finals — in an organized and searchable format." wrappingWidth="693.9830722808838">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Text>
+                                                <Text layoutX="15.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This system is created with the aim of solving the longstanding issues of question paper accessibility, where students traditionally depend on class representatives, social media groups, or scattered online drives to obtain past papers. These methods are inconsistent, unsecure, and often biased towards certain batches or departments. QBank eliminates these barriers by offering an offline-accessible, image-supported, and metadata-tagged solution." wrappingWidth="692.9830722808838">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Text>
+                                                <Text layoutX="14.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Key Features:" wrappingWidth="710.9830722808838">
+                                                   <font>
+                                                      <Font name="System Bold" size="19.0" />
+                                                   </font>
+                                                </Text>
+                                                <Text layoutX="37.0" layoutY="284.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1. Full support for categorization by Department, Course Title, Question Type, Batch, and                 Exam Code" wrappingWidth="651.9830722808838">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Text>
+                                                <Text layoutX="37.0" layoutY="334.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2. Ability to upload questions in image format, preserving clarity and original formatting" wrappingWidth="651.9830722808838">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Text>
+                                                <Text layoutX="37.0" layoutY="364.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3. Search and filter functionality for quick and structured question lookup" wrappingWidth="651.9830722808838">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Text>
+                                                <Text layoutX="37.0" layoutY="385.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4. Clean and intuitive interface suitable for both technical and non-technical users" wrappingWidth="591.9830722808838">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Text>
+                                                <Text layoutX="37.0" layoutY="410.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5. Admin panel for question moderation, updates, and user management" wrappingWidth="580.9830722808838">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Text>
+                                                <Text layoutX="14.0" layoutY="450.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Our Mission:" wrappingWidth="710.9830722808838">
+                                                   <font>
+                                                      <Font name="System Bold" size="20.0" />
+                                                   </font>
+                                                </Text>
+                                                <Text layoutX="37.0" layoutY="477.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To digitize the academic archive of BAUST and make educational resources equally accessible for all, regardless of semester, department, or network connection." wrappingWidth="651.9830722808838">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Text>
+                                                <Text layoutX="14.0" layoutY="540.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Our Vision:" wrappingWidth="710.9830722808838">
+                                                   <font>
+                                                      <Font name="System Bold" size="20.0" />
+                                                   </font>
+                                                </Text>
+                                                <Text layoutX="37.0" layoutY="571.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To become a model academic tool that inspires other institutions to adopt structured and transparent question paper management, improving exam preparation, academic equality, and institutional memory." wrappingWidth="651.9830722808838">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Text>
+                                                <Text layoutX="37.0" layoutY="635.0" strokeType="OUTSIDE" strokeWidth="0.0" text="We believe that every student deserves equal access to educational tools, and with QBank, we bring that vision closer to reality." wrappingWidth="651.9830722808838">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Text>
+                                                <Text layoutX="7.0" layoutY="693.0" strokeType="OUTSIDE" strokeWidth="0.0" text="👨‍💻 Developer Information" wrappingWidth="710.9830722808838">
+                                                   <font>
+                                                      <Font name="System Bold" size="20.0" />
+                                                   </font>
+                                                </Text>
+                                                <AnchorPane layoutX="14.0" layoutY="709.0" prefHeight="387.0" prefWidth="221.0">
+                                                   <children>
+                                                      <ImageView fitHeight="200.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@Img/IMG-20250201-WA0046%5B1%5D.jpg" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <Text layoutX="11.0" layoutY="218.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name: Md Waliur Rafiq Samir" wrappingWidth="210.9830722808838" />
+                                                      <Text layoutX="12.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID: 0802410205101088" wrappingWidth="194.9830722808838" />
+                                                      <Text layoutX="8.0" layoutY="297.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contributions:" wrappingWidth="125.98307228088379">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Text>
+                                                      <Text layoutX="8.0" layoutY="317.0" strokeType="OUTSIDE" strokeWidth="0.0" text="(Lead Developer): Designed and implemented all backend functionalities and mastered the complete system architecture" wrappingWidth="217.9830722808838">
+                                                         <font>
+                                                            <Font size="13.0" />
+                                                         </font>
+                                                      </Text>
+                                                      <Text layoutX="12.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email: waliurrafiqsami@gmail.com" wrappingWidth="208.9830722808838" />
+                                                      <Text layoutX="12.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact: +880 1819802139" wrappingWidth="208.9830722808838" />
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane layoutX="240.0" layoutY="708.0" prefHeight="392.0" prefWidth="228.0">
+                                                   <children>
+                                                      <ImageView fitHeight="199.0" fitWidth="205.0" layoutX="7.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@Img/407653848_2467545543423699_8946431548484785016_n.jpg" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <Text layoutX="11.0" layoutY="218.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name: Md Tamim Hasan Siam" wrappingWidth="210.9830722808838" />
+                                                      <Text layoutX="12.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID: 0802410205101051" wrappingWidth="194.9830722808838" />
+                                                      <Text layoutX="8.0" layoutY="297.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contributions:" wrappingWidth="125.98307228088379">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Text>
+                                                      <Text layoutX="8.0" layoutY="317.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Managed database design and MySQL integration; also contributed across various functional areas." wrappingWidth="217.9830722808838">
+                                                         <font>
+                                                            <Font size="13.0" />
+                                                         </font>
+                                                      </Text>
+                                                      <Text layoutX="12.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email: htamim495@gmail.com" wrappingWidth="208.9830722808838" />
+                                                      <Text layoutX="12.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact: +880 1797007838" wrappingWidth="208.9830722808838" />
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane layoutX="478.0" layoutY="709.0" prefHeight="390.0" prefWidth="226.0">
+                                                   <children>
+                                                      <ImageView fitHeight="200.0" fitWidth="193.0" layoutX="6.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@Img/IMG_20250524_161322_217.jpg" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <Text layoutX="11.0" layoutY="218.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name: Muhammad Mobasher Ahmmed " wrappingWidth="210.9830722808838" />
+                                                      <Text layoutX="9.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID: 0802410205101061" wrappingWidth="194.9830722808838" />
+                                                      <Text layoutX="7.0" layoutY="312.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contributions:" wrappingWidth="125.98307228088379">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Text>
+                                                      <Text layoutX="7.0" layoutY="333.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Focused on UI/UX design to ensure a smooth user experience; also supported other technical components." wrappingWidth="217.9830722808838">
+                                                         <font>
+                                                            <Font size="13.0" />
+                                                         </font>
+                                                      </Text>
+                                                      <Text layoutX="9.0" layoutY="272.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email: Muhammad@gmail.com" wrappingWidth="208.9830722808838" />
+                                                      <Text layoutX="9.0" layoutY="291.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact: +880 1875-057820" wrappingWidth="208.9830722808838" />
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                                </ScrollPane>
+                                            </children>
+                                        </AnchorPane>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </center>
+                </BorderPane>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>

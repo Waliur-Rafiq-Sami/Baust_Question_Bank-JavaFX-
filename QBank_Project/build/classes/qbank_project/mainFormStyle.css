@@ -1,0 +1,231 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Apr 19, 2025, 11:09:56 AM
+    Author     : waliu
+*/
+.header {
+    -fx-background-color: linear-gradient(
+        to left bottom,
+        #64b5f6,
+        #4fc3f7,
+        #4dd0e1,
+        #81c784
+        );
+    -fx-border-color: linear-gradient(
+        to right,
+        #00c6ff,sign-outBtn
+        #0072ff
+        );
+    -fx-border-width: 0 3px 3px 0px;
+
+}
+.ocean-breeze-bg {
+    -fx-background-color: linear-gradient(
+        to left bottom,
+        #e0f7fa,
+        #b2ebf2,
+        #b2dfdb,
+        #c8e6c9
+        );
+}
+.cream-bg {
+    -fx-background-color: linear-gradient(
+        to left bottom,
+        #fffdf5,
+        #fff9e6,
+        #fff3cc,
+        #ffedb3
+        );
+}
+
+.nav-form {
+    -fx-background-color: linear-gradient(
+        to bottom right,
+        #1e3c72,
+        #2a5298,
+        #00b4db,
+        #0083b0
+        );
+    -fx-border-color: linear-gradient(
+        to right,
+        #00c6ff,
+        #0072ff
+        );
+    -fx-border-width: 0 3px 0px 0px;
+}
+
+
+.nav-btn {
+    -fx-background-color: transparent;
+    -fx-border-color: #ffffff;
+    -fx-border-width: 1.5px;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-padding: 8 16;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+    -fx-transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+    -fx-background-color: linear-gradient(
+        to right,
+        #00c6ff,
+        #0072ff
+        );
+    -fx-text-fill: white;
+    -fx-border-color: transparent;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 6, 0.3, 0, 2);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.sign-outBtn {
+    -fx-background-color: linear-gradient(
+        to right,
+        #667eea,
+        #764ba2
+        );
+    -fx-background-radius: 8;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 6, 0.3, 0, 2);
+    -fx-transition: all 0.3s ease;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+}
+.welcomeBtn {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-text-fill: #ff50c2; /* deeper blue */
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-opacity: 1; /* ensures full visibility */
+    -fx-cursor: hand;
+}
+
+
+.welcomeBtn:hover {
+    -fx-underline: true;
+    -fx-text-fill: #2980b9; /* slightly darker blue on hover */
+}
+
+
+.sign-outBtn:hover {
+    -fx-background-color: linear-gradient(
+        to right,
+        #43cea2,
+        #185a9d
+        );
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.SearchBtn {
+    -fx-background-color: linear-gradient(
+        to left,
+        #43cea2,
+        #185a9d
+        );
+    -fx-background-radius: 8;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-padding: 9 24;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 6, 0.3, 0, 2);
+    -fx-transition: all 0.3s ease;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+}
+.SearchBtn:hover {
+    -fx-background-color: linear-gradient(
+        to right,
+        #667eea,
+        #764ba2
+        );
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+.shadow {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 5, 0, 0, 0);
+}
+
+.white-bg {
+    -fx-background-color: #fff;
+}
+
+.radius {
+    -fx-background-radius: 8px;
+}
+
+.transparent{
+    -fx-background-color: transparent;
+
+}
+
+.cream-linerColor{
+    -fx-background-color: linear-gradient(
+        to bottom right,
+        #fff8e1,
+        #ffe0b2,
+        #ffccbc
+        );
+}
+
+.getAllColor{
+    -fx-background-color: linear-gradient(
+        to bottom right,
+        #eceff1,
+        #cfd8dc
+        );
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 6, 0.3, 0, 2);
+    -fx-transition: all 0.3s ease;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+}
+
+.getAllColor:hover{
+
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+.searchform{
+    -fx-font-weight: bold;
+    -fx-border-color: linear-gradient(
+        to right,
+        #00c6ff,
+        #0072ff
+        );
+    -fx-border-width: 0 0px 3px 0px;
+}
+
+.searchFiled {
+    -fx-background-color: transparent;
+    -fx-border-color: linear-gradient(to bottom right, #4ca1af, #2c3e50);
+    -fx-border-width: 2px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-padding: 6px 10px;
+    -fx-prompt-text-fill: rgba(255, 255, 255, 0.6);
+}
+.main_bg{
+    -fx-background-color: linear-gradient(
+        to right,
+        #a1ffce,
+        #faffd1
+        );
+
+}

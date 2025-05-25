@@ -1,0 +1,80 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Apr 18, 2025, 3:09:55 PM
+    Author     : waliu
+*/
+
+/*.gradient {
+    -fx-background-color: linear-gradient(to right, #64b5f6, #81c784);
+
+}*/
+
+.gradient {
+    -fx-background-color: linear-gradient(
+        to right bottom,
+        #64b5f6,
+        #4fc3f7,
+        #4dd0e1,
+        #81c784
+        );
+}
+
+.white-form {
+    -fx-background-color: #fff;
+}
+
+.head-label {
+    -fx-border-color: #286155;
+    -fx-border-width: 0 0 0 3px;
+    -fx-padding: 0 0 0 5px;
+}
+
+.login-btn {
+    -fx-background-color: linear-gradient(to bottom right, #098c53, #246861);
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+}
+
+.login-btn:hover {
+    -fx-background-color: linear-gradient(to bottom right, #0fb565, #399a8f);
+}
+
+.textfield {
+    -fx-background-color: transparent;
+    -fx-border-color: linear-gradient(to bottom right, #0f6789, #286155);
+    -fx-border-width: 1px;
+}
+
+.textfield:focused {
+    -fx-border-width: 1.5px;
+}
+
+.create-btn {
+    -fx-background-color: linear-gradient(
+        to bottom left,
+        #42a5f5,
+        /*#4dd0e1,*/
+        #66bb6a,
+        #aed581
+        );
+    -fx-background-insets: 0;
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+    -fx-transition: all 0.4s ease;
+    -fx-text-fill: #0d0b0b;
+}
+
+.create-btn:hover {
+    -fx-background-color: linear-gradient(
+        to bottom left,
+        #1e88e5,
+        /*#26c6da,*/
+        #43a047,
+        #c5e1a5
+        );
+    -fx-text-fill: #000;
+}
